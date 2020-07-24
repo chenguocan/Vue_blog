@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <a href="https://www.baidu.com/" v-on:click="handle">跳转</a>
+    </div>
+  </body>
+  <script src="./js/vue.js"></script>
+  <script>
+    let app = new Vue({
+      el: "#app",
+      data: {},
+      methods: {
+        handle: function () {
+          msg: `
+          <div id='div' onclick='alert("div");'>
+<ul onclick='alert("ul");'>
+<li onclick='alert("li");'>test</li>
+</ul>
+</div>
+          `;
+        },
+      },
+    });
+  </script>
+</html>
